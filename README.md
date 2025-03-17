@@ -1,6 +1,6 @@
-# README for Biol5379 Assessment Code
+# README
 
-This README provides an overview of the R code provided for the Biol5379 assessment. The code is designed to analyze a bulk RNA-seq dataset comparing proliferating cells (prolif), replicative senescent cells (senes), and senescent cells with depleted mitochondria (senes_MtD). The goal is to explore the transcriptomic changes associated with senescence and mitochondrial depletion in human IMR90 fibroblasts.
+The code is designed to analyze a bulk RNA-seq dataset comparing proliferating cells (prolif), replicative senescent cells (senes), and senescent cells with depleted mitochondria (senes_MtD). The goal is to explore the transcriptomic changes associated with senescence and mitochondrial depletion in human IMR90 fibroblasts.
 
 ## Overview of the Code
 
