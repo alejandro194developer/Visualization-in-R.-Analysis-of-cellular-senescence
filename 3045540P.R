@@ -9,14 +9,14 @@ library(org.Hs.eg.db)
 library(tidyr)
 library(stringr)
 
-source("C:\\Glasgow university\\data visualization in R\\final_project\\functions.r")
+source("functions.r")
 
 #get all tables
-em = read.table("C:\\Glasgow university\\data visualization in R\\final_project\\data\\EM.csv", header=TRUE, row.names = 1, sep="\t")
-de_smtd_vs_p = read.table("C:\\Glasgow university\\data visualization in R\\final_project\\data\\DE_Senes_MtD_vs_Prolif.csv", header=TRUE, row.names = 1, sep="\t")
-de_s_vs_smtd = read.table("C:\\Glasgow university\\data visualization in R\\final_project\\data\\DE_Senes_MtD_vs_Senes.csv", header=TRUE, row.names = 1, sep="\t")
-de_s_vs_p = read.table("C:\\Glasgow university\\data visualization in R\\final_project\\data\\DE_Senes_vs_Prolif.csv", header=TRUE, row.names = 1, sep="\t")
-human_background = read.table("C:\\Glasgow university\\data visualization in R\\final_project\\data\\Human_Background_GRCh38.p13.csv", header=TRUE, row.names = 1, sep="\t")
+em = read.table("data\\EM.csv", header=TRUE, row.names = 1, sep="\t")
+de_smtd_vs_p = read.table("data\\DE_Senes_MtD_vs_Prolif.csv", header=TRUE, row.names = 1, sep="\t")
+de_s_vs_smtd = read.table("data\\DE_Senes_MtD_vs_Senes.csv", header=TRUE, row.names = 1, sep="\t")
+de_s_vs_p = read.table("data\\DE_Senes_vs_Prolif.csv", header=TRUE, row.names = 1, sep="\t")
+human_background = read.table("data\\Human_Background_GRCh38.p13.csv", header=TRUE, row.names = 1, sep="\t")
 
 em = na.omit(em)
 de_smtd_vs_p = na.omit(de_smtd_vs_p)
