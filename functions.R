@@ -20,7 +20,7 @@ facet_density_plot = function(em, title, x_label, y_label, log_upset){
     facet_wrap(~ variable, scales = "free") +  # Separate plots for each column
     labs(title = title,
          x = x_label, y = y_label)
-  save_plot("plots_3045540P/",title, density_plot)
+  save_plot("plots/",title, density_plot)
   return(density_plot)
 }
 
@@ -50,7 +50,7 @@ plot_ma = function(de_table, title){
          x = "Mean Expression (Log10)",
          y = "Log2 Fold Change") +
     geom_hline(yintercept = 0, linetype = "dashed", color = "black")
-  save_plot("plots_3045540P/",title, plot_MA)
+  save_plot("plots/",title, plot_MA)
   return(plot_MA)
 }
 
@@ -82,7 +82,7 @@ plot_pca = function(table_scaled, class_name_vector, title, x_pca, y_pca){
     labs(title = title,
          x = x_axis_label,
          y = y_axis_label)
-  save_plot("plots_3045540P/",title, pca_plot)
+  save_plot("plots/",title, pca_plot)
   return(pca_plot)
 }
 
@@ -105,7 +105,7 @@ plot_volcano = function(de_table, up_regulated_genes_table, down_regulated_genes
     geom_text_repel(data = table_sig_up_top5, aes(label=table_sig_up_top5$gene_name)) +
     geom_text_repel(data = table_sig_down_top5 ,aes(label=table_sig_down_top5$gene_name)) + 
     labs(title = title, x = x_label, y = y_label)
-  save_plot("plots_3045540P/",title, ggp_volcano_plot)
+  save_plot("plots/",title, ggp_volcano_plot)
   return(ggp_volcano_plot)
 }
 
@@ -148,7 +148,7 @@ plot_heatmap = function(em_table, title){
   heat_map = ggplot(hm.matrix_clustered, aes(x=Var2, y=Var1, fill=value)) + geom_tile() + scale_fill_gradientn(colours = palette) + 
     labs(title=title, x="", y="") + 
     theme(axis.text.y = element_blank(), axis.ticks=element_blank(), legend.title = element_blank(), legend.spacing.x = unit(0.25, 'cm'))
-  save_plot("plots_3045540P/",title, heat_map)
+  save_plot("plots/",title, heat_map)
   return(heat_map)
 }
 
@@ -178,7 +178,7 @@ pathway_plot = function(de_table_genes_names, title, x_label, y_label, low_color
          x = x_label,
          y = y_label) +
     scale_fill_gradient(low = low_color, high = high_color) 
-  save_plot("plots_3045540P/",title, pathway_plot)
+  save_plot("plots/",title, pathway_plot)
   return(pathway_plot)
 }
 
@@ -198,7 +198,7 @@ plot_box_gitter_plot = function(em_table, title, x_label, y_label){
     geom_boxplot(alpha = 0.6) +
     geom_jitter(aes(color = Group), width = 0.2, alpha = 0.6) +
     labs(title = title, x = x_label, y = y_label)
-  save_plot("plots_3045540P/",title, box_gitter_plot)
+  save_plot("plots/",title, box_gitter_plot)
   return(box_gitter_plot)
   
 }
